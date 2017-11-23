@@ -61,9 +61,8 @@ class VisionOCR(object):
         data = None
 
         if image is not None:
-            with open(image, 'rb') as f:
-                data = f.read()
-                headers['Content-Type'] = 'application/octet-stream'
+            data = image.read()
+            headers['Content-Type'] = 'application/octet-stream'
         elif image_url is not None:
             headers['Content-Type'] = 'application/json'
             json = {'url': image_url}
