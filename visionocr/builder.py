@@ -6,8 +6,8 @@ class TextBuilder(object):
     def build(response):
         built_text = []
 
-        for region in response['regions']:
-            for line in region['lines']:
+        for block in response['readResult']['blocks']:
+            for line in block['lines']:
                 for word in line['words']:
                     built_text.append(word['text'])
                     built_text.append(' ')

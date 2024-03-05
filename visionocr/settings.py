@@ -1,2 +1,3 @@
-REGION = 'westcentralus'
-KEY = 'abc123'
+VISION_KEY = 'abc123'
+VISION_ENDPOINT = ''
+
